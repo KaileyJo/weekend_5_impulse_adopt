@@ -1,6 +1,6 @@
 <button><a href="#favorites">View Favorites</a></button>
 <h2>Find a Pet Here</h2>
-<!--<p>You currently have {{count}} favorites.</p>-->
+<p>You currently have {{favAnimalCount}} favorites.</p>
 <form>
     <select ng-model="animal" ng-change="animalSearch()">
         <option value="">Choose an Animal...</option>
@@ -16,9 +16,9 @@
 </form>
 
 <div ng-hide="animalInfo">
+    <img ng-src="{{animal.media.photos.photo[2].$t}}" />
     <h3>Name: {{animal.name.$t}}</h3>
     <h4>About me: </h4>
     <p>{{animal.description.$t}}</p>
-    <img ng-src="{{animal.media.photos.photo[2].$t}}" />
     <button ng-click="newFavorite()">Add to Favorites</button>
 </div>

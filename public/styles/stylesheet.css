@@ -1,0 +1,16 @@
+body {
+    margin: auto;
+}
+.favAnimals {
+    margin: auto;
+    width: 90%;
+    height: auto;
+}
+
+.favAnimals img {
+    float: left;
+    height: 200px;
+    width: auto;
+    margin: 10px;
+}
+
