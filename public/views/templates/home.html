@@ -3,6 +3,7 @@
 <p>You currently have {{favAnimalCount}} favorites.</p>
 <form>
     <select ng-model="animal" ng-change="animalSearch()">
+        <option value="">Choose an Animal...</option>
         <option ng-repeat="animal in animalOptions" value="{{animal.value}}">{{animal.animal}}</option>
     </select>
 </form>

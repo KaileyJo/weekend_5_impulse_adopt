@@ -4,15 +4,15 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     $scope.animal = '';
     $scope.dataFactory = dataFactory;
     $scope.animalOptions = [
-        {value: 'barnyard', animal: 'Barn Animal'},
-        {value: 'bird', animal: 'Bird'},
-        {value: 'cat', animal: 'Cat'},
-        {value: 'dog', animal: 'Dog'},
-        {value: 'horse', animal: 'Horse'},
-        {value: 'pig', animal: 'Pig'},
-        {value: 'rabbit', animal: 'Rabbit'},
-        {value: 'reptile', animal: 'Reptile'},
-        {value: 'smallfurry', animal: 'Small and Furry'}];
+        {value: 'barnyard', animal: 'Moooooooo'},
+        {value: 'bird', animal: 'Chirp Chirp'},
+        {value: 'cat', animal: 'Maow'},
+        {value: 'dog', animal: 'Woof Woof'},
+        {value: 'horse', animal: 'Neigh'},
+        {value: 'pig', animal: 'Oink Oink'},
+        {value: 'rabbit', animal: 'Eh.. What\'s up, Doc?'},
+        {value: 'reptile', animal: 'Hssssssss...'},
+        {value: 'smallfurry', animal: 'Squeak Squeak'}];
 
     dataFactory.retrieveData().then(function() {
         $scope.favAnimalCount = dataFactory.animalsData().length;
