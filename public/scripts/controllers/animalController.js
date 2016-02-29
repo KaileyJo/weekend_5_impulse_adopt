@@ -2,6 +2,14 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     $scope.animalInfo = true;
     var favorite = [];
     $scope.animal = '';
+    $scope.dataFactory = dataFactory;
+    //$scope.count = 0;
+
+    //$scope.count;
+    //$scope.count = dataFactory.retrieveData.length;
+    //console.log($scope.count);
+    //$scope.count = dataFactory.animalCount();
+
 
     function animalFinder(animalVal) {
         favorite = [];
@@ -31,8 +39,6 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
 
     }
 
-    $scope.dataFactory = dataFactory;
-
     $scope.animalSearch = function() {
         if($scope.animal != '') {
             animalFinder($scope.animal);
@@ -42,19 +48,8 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     $scope.newFavorite = function() {
         console.log(favorite);
         dataFactory.newAnimal(favorite);
-
-    //
-    //    //$scope.animal = $scope.dataFactory.animalsData();
-    //
-    //    //$scope.addAnimal = function() {
-    //    //    console.log($scope.animalName);
-    //    //    $scope.dataFactory.addName($scope.animalName);
-    //    //
-    //    //    $scope.animalName = '';
-    //    //
-    //    //    //$scope.animal = $scope.dataFactory.animalData();
-    //    //}
+        //$scope.count++;
+        //$scope.count = dataFactory.animalCount();
+        //$scope.count = dataFactory.retrieveData().then(dataFactory.count);
     };
-
-
 }]);

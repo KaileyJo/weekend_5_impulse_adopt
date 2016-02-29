@@ -1,0 +1,8 @@
+<button><a href="#home">Return to Home</a></button>
+<h2>You Currently Have {{animals.length}} Favorite<span ng-show="animals.length > 1">s</span> to Impulsively Adopt!</h2>
+<div ng-repeat="animal in animals">
+    <p>{{animal.name}}</p>
+    <p>ID: {{animal.id}}</p>
+    <p>About Me: {{animal.description}}...</p>
+    <img ng-src="{{animal.image}}" />
+</div>
