@@ -3,15 +3,7 @@
 <p>You currently have {{favAnimalCount}} favorites.</p>
 <form>
     <select ng-model="animal" ng-change="animalSearch()">
-        <option value="">Choose an Animal...</option>
-        <option value="barnyard">Barn Animal</option>
-        <option value="bird">Bird</option>
-        <option value="cat">Cat</option>
-        <option value="dog">Dog</option>
-        <option value="horse">Horse</option>
-        <option value="pig">Pig</option>
-        <option value="reptile">Reptile</option>
-        <option value="smallfurry">Small & Furry</option>
+        <option ng-repeat="animal in animalOptions" value="{{animal.value}}">{{animal.animal}}</option>
     </select>
 </form>
 

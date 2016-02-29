@@ -3,6 +3,16 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     var favorite = [];
     $scope.animal = '';
     $scope.dataFactory = dataFactory;
+    $scope.animalOptions = [
+        {value: 'barnyard', animal: 'Barn Animal'},
+        {value: 'bird', animal: 'Bird'},
+        {value: 'cat', animal: 'Cat'},
+        {value: 'dog', animal: 'Dog'},
+        {value: 'horse', animal: 'Horse'},
+        {value: 'pig', animal: 'Pig'},
+        {value: 'rabbit', animal: 'Rabbit'},
+        {value: 'reptile', animal: 'Reptile'},
+        {value: 'smallfurry', animal: 'Small and Furry'}];
 
     dataFactory.retrieveData().then(function() {
         $scope.favAnimalCount = dataFactory.animalsData().length;
