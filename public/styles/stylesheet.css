@@ -3,14 +3,37 @@ body {
 }
 .favAnimals {
     margin: auto;
-    width: 90%;
     height: auto;
 }
 
 .favAnimals img {
     float: left;
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 300px;
     margin: 10px;
 }
 
+span {
+    font-weight: bold;
+}
+
+.goTo {
+    float: right;
+    margin-right: 30px;
+    margin-top: 25px;
+}
+
+.goTo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.newFav {
+    float: right;
+    margin-right: 30px;
+    margin-top: 25px;
+}
+
+.petForm {
+    margin-bottom: 20px;
+}
