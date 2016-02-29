@@ -48,5 +48,8 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
         console.log(favorite);
         dataFactory.newAnimal(favorite);
         $scope.favCount = dataFactory.animalCount();
+        dataFactory.retrieveData().then(function() {
+            $scope.favAnimalCount = dataFactory.animalsData().length;
+        });
     };
 }]);
