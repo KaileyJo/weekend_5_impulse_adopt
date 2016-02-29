@@ -3,14 +3,12 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     var favorite = [];
     $scope.animal = '';
     $scope.dataFactory = dataFactory;
-    $scope.favCount = dataFactory.animalCount();
+
     dataFactory.retrieveData().then(function() {
         $scope.favAnimalCount = dataFactory.animalsData().length;
     });
 
     function animalFinder(animalVal) {
-        $scope.favCount = dataFactory.animalCount();
-
         favorite = [];
         var key = '5ac82314a4f2c2a8b046428dbca4b0fb';
 
@@ -47,7 +45,6 @@ myApp.controller('animalController', ['$scope', '$http', 'DataFactory', function
     $scope.newFavorite = function() {
         console.log(favorite);
         dataFactory.newAnimal(favorite);
-        $scope.favCount = dataFactory.animalCount();
         dataFactory.retrieveData().then(function() {
             $scope.favAnimalCount = dataFactory.animalsData().length;
         });
