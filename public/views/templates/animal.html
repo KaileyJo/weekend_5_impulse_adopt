@@ -1,0 +1,17 @@
+<form>
+    <select ng-model="animal" ng-change="animalSearch()">
+        <option value="">Choose an Animal...</option>
+        <option value="barnyard">Barn Animal</option>
+        <option value="bird">Bird</option>
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="horse">Horse</option>
+        <option value="pig">Pig</option>
+        <option value="reptile">Reptile</option>
+        <option value="smallfurry">Small & Furry</option>
+    </select>
+</form>
+
+<div>
+    <h3>Name: {{animal.name.$t}}</h3>
+</div>
